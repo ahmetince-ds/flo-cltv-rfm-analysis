@@ -11,6 +11,9 @@ from eda import grab_col_names,cat_summary,num_summary
 import sys
 import os
 
+os.makedirs("images", exist_ok=True)
+os.makedirs("outputs", exist_ok=True)
+
 sys.path.append(os.path.dirname(__file__))
 
 pd.set_option('display.max_columns',None)
@@ -398,3 +401,6 @@ print(campaign_strategy)
 
 # -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 
+plt.savefig("images/rfm_segments.png", dpi=300, bbox_inches="tight")
+
+plt.savefig("images/cltv_segments.png", dpi=300, bbox_inches="tight")
